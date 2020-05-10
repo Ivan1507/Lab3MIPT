@@ -14,7 +14,7 @@ int main()
  }
  int l=0;
  if(k>2){
-    l=A[n/k]-A[0];
+    l=max(A[n/k]-A[0],A[n-1]-A[n/k]);
  }
  else l=A[n-1]-A[0];
  cout<<l;
