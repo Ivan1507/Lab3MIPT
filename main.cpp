@@ -1,35 +1,46 @@
 #include <iostream>
-#include<stdio.h>
-#include <iostream>
 #include <string>
+#include <vector>
 using namespace std;
-
 int main()
 {
- int n,k;
- cin>>n>>k;
- int A[n];
- int K[k];
- int max=0;
+
+ int n;
+ bool news;
+cin>>n>>news;
+vector<string> A;
+int den;
+vector<bool> B;
+int top=0;
+for(int i=0;i<n;i++){
+cin>>A[i]>>B[i];
+}
+bool tek_news=news;
+cin>>den;
+int i=0;
+
+while(den!=0){
+        if(top==n-1) break;
+if(B[i]==1&&tek_news==0){
+            dye[top]=i;
+            top++;
+    tek_news=0;
+    }
+      else if(B[i]==0&&tek_news==0) {
+tek_news=1;
+B[i]=true;
+}
+else if(B[i]==1&&tek_news==1) tek_news=1;
+else if(B[i]==0&&tek_news==1) tek_news=0;
+    den--;
+    i++;
+}
  for(int i=0;i<n;i++){
-    cin>>A[i];
-    max=A[1]-A[0];
+     if(i+1!=dye[i])
+    cout<<A[i]<<" "<<B[i]<<endl;
+
+    }
  }
- K[0]=A[0];
- K[k-1]=A[n-1];
- int count=0;
- int min_rast=1;
-for(int i=0;i<n-1;i++){
-     if(A[i]+A[0]>max){
-        K[count+1]=A[i];
-     }
-}
-int max2=K[1]-K[0];
-for(int i=0;i<k-1;i++){
-    if(K[i+1]-K[i]>max2) max2=K[i+1]-K[i];
-}
- cout<<K[n-1];
-}
 
 
 
