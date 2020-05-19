@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1589890341 source:d:\projects\first\vavilon\main.cpp
+	<iostream>
+	<math.h>
+
